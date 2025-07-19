@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعرض - استوديو حسن كلوز</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html" style="color: white; text-decoration: none;">استوديو حسن كلوز</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html#about">عن الاستوديو</a></li>
+                    <li><a href="index.html#services">الخدمات</a></li>
+                    <li><a href="gallery.html">المعرض</a></li>
+                    <li><a href="index.html#contact">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-hero">
+            <div class="container">
+                <h1>معرض أعمالنا</h1>
+                <p>استكشف مجموعة من أفضل أعمالنا في التصوير والإنتاج الإعلامي</p>
+            </div>
+        </section>
+
+        <section class="gallery-controls">
+            <div class="container">
+                <div class="controls-row">
+                    <div class="filter-controls">
+                        <h3>تصنيف الصور:</h3>
+                        <button onclick="filterGallery('all')" class="filter-btn active">الكل</button>
+                        <button onclick="filterGallery('تصوير خارجي')" class="filter-btn">تصوير خارجي</button>
+                        <button onclick="filterGallery('منتجات')" class="filter-btn">منتجات</button>
+                        <button onclick="filterGallery('مهرجانات')" class="filter-btn">مهرجانات</button>
+                    </div>
+                    
+                    <div class="sort-controls">
+                        <h3>ترتيب حسب:</h3>
+                        <select onchange="sortGallery(this.value)" class="sort-select">
+                            <option value="newest">الأحدث</option>
+                            <option value="likes">الأكثر إعجاباً</option>
+                            <option value="views">الأكثر مشاهدة</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="upload-section">
+                    <h3>إضافة صورة جديدة:</h3>
+                    <div class="upload-form">
+                        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                        <button onclick="document.getElementById('imageUpload').click()" class="upload-btn">اختر صورة</button>
+                        <select id="categorySelect" class="category-select">
+                            <option value="تصوير خارجي">تصوير خارجي</option>
+                            <option value="منتجات">منتجات</option>
+                            <option value="مهرجانات">مهرجانات</option>
+                        </select>
+                        <button onclick="uploadImage()" class="add-btn">إضافة</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <div id="gallery-container" class="gallery-grid">
+                    <!-- سيتم ملء المحتوى بواسطة JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- مودال عرض الصورة -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalCategory"></h3>
+                <div class="modal-stats">
+                    <span id="modalLikes"></span>
+                    <span id="modalViews"></span>
+                </div>
+                <div class="comments-section">
+                    <h4>التعليقات:</h4>
+                    <div id="commentsList"></div>
+                    <div class="add-comment">
+                        <input type="text" id="commentInput" placeholder="اكتب تعليقك...">
+                        <button onclick="addComment()">إضافة تعليق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 استوديو حسن كلوز. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
+

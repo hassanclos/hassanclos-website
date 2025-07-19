@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - استوديو حسن كلوز</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html" style="color: white; text-decoration: none;">استوديو حسن كلوز</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html#about">عن الاستوديو</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="gallery.html">المعرض</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>تواصل معنا</h1>
+                <p>نحن هنا للإجابة على استفساراتكم ومساعدتكم في تحقيق رؤيتكم الإبداعية</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- معلومات التواصل -->
+                    <div class="contact-info">
+                        <h2>معلومات التواصل</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h3>الهاتف / واتساب</h3>
+                                <p><a href="tel:07770211173">07770211173</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>البريد الإلكتروني</h3>
+                                <p><a href="mailto:hassan.clos1@gmail.com">hassan.clos1@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h3>العنوان</h3>
+                                <p>يتم تحديد مكان التصوير حسب المشروع<br>
+                                نقدم خدماتنا في جميع أنحاء المنطقة</p>
+                            </div>
+                        </div>
+
+                        <div class="social-media">
+                            <h3>تابعونا على وسائل التواصل الاجتماعي</h3>
+                            <div class="social-links">
+                                <a href="https://instagram.com/hassan.clos" target="_blank" class="social-link instagram">
+                                    <span class="social-icon">📷</span>
+                                    <span>إنستغرام</span>
+                                </a>
+                                <a href="https://tiktok.com/@hassan.clos" target="_blank" class="social-link tiktok">
+                                    <span class="social-icon">🎵</span>
+                                    <span>تيك توك</span>
+                                </a>
+                                <a href="https://youtube.com/@hassan.clos1" target="_blank" class="social-link youtube">
+                                    <span class="social-icon">📺</span>
+                                    <span>يوتيوب</span>
+                                </a>
+                                <a href="https://facebook.com/استوديو-حسن-كلوز" target="_blank" class="social-link facebook">
+                                    <span class="social-icon">📘</span>
+                                    <span>فيسبوك</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- نموذج التواصل -->
+                    <div class="contact-form-container">
+                        <h2>أرسل لنا رسالة</h2>
+                        <form class="contact-form" onsubmit="submitForm(event)">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">نوع الخدمة المطلوبة</label>
+                                <select id="service" name="service" required>
+                                    <option value="">اختر الخدمة</option>
+                                    <option value="photography">تصوير فوتوغرافي احترافي</option>
+                                    <option value="video">تصوير فيديو إعلاني وتسويقي</option>
+                                    <option value="social-media">تصميم إعلانات سوشيال ميديا</option>
+                                    <option value="editing">مونتاج فيديو احترافي</option>
+                                    <option value="reels">إنتاج مقاطع ريلز قصيرة</option>
+                                    <option value="events">تغطية مهرجانات وفعاليات</option>
+                                    <option value="podcast">إعداد وبث بودكاست بصري</option>
+                                    <option value="other">خدمة أخرى</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget">الميزانية المتوقعة</label>
+                                <select id="budget" name="budget">
+                                    <option value="">اختر الميزانية</option>
+                                    <option value="under-500">أقل من 500 دولار</option>
+                                    <option value="500-1000">500 - 1000 دولار</option>
+                                    <option value="1000-2000">1000 - 2000 دولار</option>
+                                    <option value="2000-5000">2000 - 5000 دولار</option>
+                                    <option value="over-5000">أكثر من 5000 دولار</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">تفاصيل المشروع</label>
+                                <textarea id="message" name="message" rows="5" placeholder="اكتب تفاصيل مشروعك هنا..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-contact">
+            <div class="container">
+                <h2>تواصل سريع</h2>
+                <p>للاستفسارات العاجلة أو الحصول على عرض سعر سريع</p>
+                <div class="quick-buttons">
+                    <a href="https://wa.me/07770211173" target="_blank" class="quick-btn whatsapp">
+                        <span class="btn-icon">💬</span>
+                        <span>واتساب</span>
+                    </a>
+                    <a href="tel:07770211173" class="quick-btn phone">
+                        <span class="btn-icon">📞</span>
+                        <span>اتصال مباشر</span>
+                    </a>
+                    <a href="mailto:hassan.clos1@gmail.com" class="quick-btn email">
+                        <span class="btn-icon">📧</span>
+                        <span>إيميل</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 استوديو حسن كلوز. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
+

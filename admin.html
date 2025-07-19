@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - استوديو حسن كلوز</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html" style="color: white; text-decoration: none;">استوديو حسن كلوز</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="gallery.html">المعرض</a></li>
+                    <li><a href="admin.html">لوحة التحكم</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-hero">
+            <div class="container">
+                <h1>لوحة التحكم</h1>
+                <p>إدارة محتوى الموقع والمعرض</p>
+            </div>
+        </section>
+
+        <section class="admin-content">
+            <div class="container">
+                <div class="admin-tabs">
+                    <button class="tab-btn active" onclick="showTab('gallery-management')">إدارة المعرض</button>
+                    <button class="tab-btn" onclick="showTab('contact-messages')">رسائل التواصل</button>
+                    <button class="tab-btn" onclick="showTab('site-stats')">إحصائيات الموقع</button>
+                </div>
+
+                <!-- إدارة المعرض -->
+                <div id="gallery-management" class="tab-content active">
+                    <h2>إدارة المعرض</h2>
+                    
+                    <div class="upload-section">
+                        <h3>إضافة صورة جديدة</h3>
+                        <div class="upload-form">
+                            <input type="file" id="adminImageUpload" accept="image/*" multiple>
+                            <select id="adminCategorySelect">
+                                <option value="تصوير خارجي">تصوير خارجي</option>
+                                <option value="منتجات">منتجات</option>
+                                <option value="مهرجانات">مهرجانات</option>
+                                <option value="بودكاست">بودكاست</option>
+                                <option value="فعاليات">فعاليات</option>
+                            </select>
+                            <input type="text" id="imageTitle" placeholder="عنوان الصورة (اختياري)">
+                            <button onclick="adminUploadImages()" class="admin-btn">إضافة الصور</button>
+                        </div>
+                    </div>
+
+                    <div class="gallery-management">
+                        <h3>الصور الموجودة</h3>
+                        <div id="adminGalleryList" class="admin-gallery-list">
+                            <!-- سيتم ملء المحتوى بواسطة JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- رسائل التواصل -->
+                <div id="contact-messages" class="tab-content">
+                    <h2>رسائل التواصل</h2>
+                    <div id="contactMessagesList" class="messages-list">
+                        <!-- سيتم ملء المحتوى بواسطة JavaScript -->
+                    </div>
+                </div>
+
+                <!-- إحصائيات الموقع -->
+                <div id="site-stats" class="tab-content">
+                    <h2>إحصائيات الموقع</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>إجمالي الزوار</h3>
+                            <p id="totalVisitors">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>عدد الصور</h3>
+                            <p id="totalImages">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>إجمالي الإعجابات</h3>
+                            <p id="totalLikes">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>إجمالي المشاهدات</h3>
+                            <p id="totalViews">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>رسائل التواصل</h3>
+                            <p id="totalMessages">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>التعليقات</h3>
+                            <p id="totalComments">0</p>
+                        </div>
+                    </div>
+                    
+                    <div class="actions-section">
+                        <h3>إجراءات إدارية</h3>
+                        <button onclick="exportData()" class="admin-btn">تصدير البيانات</button>
+                        <button onclick="resetStats()" class="admin-btn danger">إعادة تعيين الإحصائيات</button>
+                        <button onclick="backupData()" class="admin-btn">نسخ احتياطي</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 استوديو حسن كلوز. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
+
